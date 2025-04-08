@@ -33,7 +33,7 @@ export default function Home() {
         <div className="flex-1 flex items-center justify-center relative">
           <div className="relative">
             <img
-              src="/img.jpg"
+              src="/my-portfolio/img.jpg"
               alt="Person Image"
               className="h-96 lg:h-[26rem] rounded-3xl shadow-lg relative z-10"
             />

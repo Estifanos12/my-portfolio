@@ -19,7 +19,7 @@ const projects = [
     title: "OpenType",
     description:
       "A minimalistic typing speed testing app built with React and TailwindCSS.",
-    image: "/projects/opentype.jpg",
+    image: "/my-portfolio/projects/opentype.jpg",
     technologies: ["React", "Redux", "TailwindCSS"],
     link: "https://estifanos12.github.io/OpenType/",
   },
@@ -28,7 +28,7 @@ const projects = [
     title: "Students Get Rentals",
     description:
       "A student rental platform for students to find and rent properties.",
-    image: "/projects/studentsgetrentals.jpg",
+    image: "/my-portfolio/projects/studentsgetrentals.jpg",
     technologies: ["React", "NextJs", "Nextra", "MongoDB"],
     link: "https://www.studentsgetrentals.com/",
   },
@@ -37,7 +37,7 @@ const projects = [
     title: "Call Analytics",
     description:
       "A minimal and aesthetic app that scans through your call history and gives you incredible graphical visualization.",
-    image: "/projects/callanalytics.jpg",
+    image: "/my-portfolio/projects/callanalytics.jpg",
     technologies: ["React", "React Native", "Chart.js"],
     link: "https://github.com/Estifanos12/Call_Analytics",
   },
@@ -46,7 +46,7 @@ const projects = [
     title: "Online Tic Tac Toe Game",
     description:
       "An online multiplayer game made with React, tailwind and firebase.",
-    image: "/projects/tictactoe.jpg",
+    image: "/my-portfolio/projects/tictactoe.jpg",
     technologies: ["React", "Tailwind CSS", "Firebase"],
     link: "https://online-tic-tac-toe-sigma.vercel.app/",
   },
@@ -54,7 +54,7 @@ const projects = [
     id: 5,
     title: "Portfolio Website",
     description: "A personal portfolio website showcasing my work and skills.",
-    image: "/projects/portfolio.png",
+    image: "/my-portfolio/projects/portfolio.png",
     technologies: ["React", "Tailwind CSS", "Shadcn"],
     link: "https://estifanosgashawtena.me",
   },

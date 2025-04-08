@@ -1,9 +1,9 @@
 {
   "name": "portfolio",
+  "homepage": "https://estifanos12.github.io/my-portfolio",
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://estifanos12.github.io/my-portfolio",
   "scripts": {
     "predeploy": "pnpm run build",
     "deploy": "gh-pages -d dist",
