@@ -20,6 +20,7 @@ import {
   Worm,
   CheckCircle2,
 } from "lucide-react";
+import { motion } from "framer-motion";
 
 const skills = [
   { name: "React", icon: <FileCode className="w-5 h-5" /> },
@@ -84,16 +85,37 @@ const workHistory = [
 export default function AboutMe() {
   return (
     <div className="flex-1 min-h-[calc(100vh-100px)] flex items-center justify-center py-2 md:px-2">
-      <div className="w-full ">
-        <Card>
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+        className="w-full"
+      >
+        <Card className="lg:px-5">
           <CardHeader>
-            <h2 className="scroll-m-20 text-2xl font-bold tracking-tight first:mt-0 line-clamp-1">
+            <motion.h2
+              initial={{ opacity: 0, y: -20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+              className="scroll-m-20 text-2xl font-bold tracking-tight first:mt-0 line-clamp-1"
+            >
               About Me
-            </h2>
-            <CardDescription>Get to know me better</CardDescription>
+            </motion.h2>
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.5, delay: 0.3 }}
+            >
+              <CardDescription>Get to know me better</CardDescription>
+            </motion.div>
           </CardHeader>
           <CardContent className="space-y-8">
-            <section className="space-y-4">
+            <motion.section
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.5, delay: 0.4 }}
+              className="space-y-4"
+            >
               <h2 className="text-2xl font-semibold">Introduction</h2>
               <p className="text-base leading-relaxed">
                 Hi there! I'm a full-stack developer with over 5 years of
@@ -104,46 +126,63 @@ export default function AboutMe() {
                 improve, always staying up-to-date with the latest technologies
                 and best practices in the industry.
               </p>
-            </section>
+            </motion.section>
 
-            <section className="space-y-4">
+            <motion.section
+              initial={{ opacity: 0, x: 20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.5, delay: 0.5 }}
+              className="space-y-4"
+            >
               <h2 className="text-2xl font-semibold flex items-center gap-2">
                 <Code2 className="w-5 h-5" />
                 Skills & Technologies
               </h2>
               <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
                 {skills.map((skill, index) => (
-                  <div
+                  <motion.div
                     key={index}
+                    initial={{ opacity: 0, scale: 0.8 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    transition={{ duration: 0.3, delay: 0.6 + index * 0.05 }}
+                    whileHover={{ scale: 1.05 }}
                     className="flex flex-col items-center justify-center p-4 bg-secondary rounded-lg hover:bg-secondary/80 transition-colors"
                   >
                     {skill.icon}
                     <span className="mt-2 text-sm font-medium">
                       {skill.name}
                     </span>
-                  </div>
+                  </motion.div>
                 ))}
               </div>
-            </section>
+            </motion.section>
 
-            <section className="space-y-4">
+            <motion.section
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true, amount: 0.2 }}
+              transition={{ duration: 0.5 }}
+              className="space-y-4"
+            >
               <h2 className="text-2xl font-semibold flex items-center gap-2">
                 <GraduationCap className="w-5 h-5" />
                 Education
               </h2>
               <div className="relative">
-                {/* Timeline line */}
                 <div className="absolute left-0 md:left-1/2 h-full w-0.5 bg-border transform md:translate-x-0 translate-x-4"></div>
-
                 <div className="space-y-8">
                   {education.map((edu, index) => (
-                    <div key={index} className="relative">
-                      {/* Timeline dot */}
+                    <motion.div
+                      key={index}
+                      initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
+                      whileInView={{ opacity: 1, x: 0 }}
+                      viewport={{ once: true, amount: 0.2 }}
+                      transition={{ duration: 0.5, delay: index * 0.1 }}
+                      className="relative"
+                    >
                       <div className="absolute left-0 md:left-1/2 w-8 h-8 bg-background border-2 border-primary rounded-full flex items-center justify-center transform md:translate-x-[-50%] translate-x-0">
                         <Calendar className="w-4 h-4 text-primary" />
                       </div>
-
-                      {/* Content */}
                       <div
                         className={`ml-12 md:ml-0 ${
                           index % 2 === 0
@@ -160,30 +199,38 @@ export default function AboutMe() {
                           <p className="text-sm">{edu.description}</p>
                         </div>
                       </div>
-                    </div>
+                    </motion.div>
                   ))}
                 </div>
               </div>
-            </section>
+            </motion.section>
 
-            <section className="space-y-4">
+            <motion.section
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true, amount: 0.2 }}
+              transition={{ duration: 0.5 }}
+              className="space-y-4"
+            >
               <h2 className="text-2xl font-semibold flex items-center gap-2">
                 <Briefcase className="w-5 h-5" />
                 Work History
               </h2>
               <div className="relative">
-                {/* Timeline line */}
                 <div className="absolute left-0 md:left-1/2 h-full w-0.5 bg-border transform md:translate-x-0 translate-x-4"></div>
-
                 <div className="space-y-8">
                   {workHistory.map((job, index) => (
-                    <div key={index} className="relative">
-                      {/* Timeline dot */}
+                    <motion.div
+                      key={index}
+                      initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
+                      whileInView={{ opacity: 1, x: 0 }}
+                      viewport={{ once: true, amount: 0.2 }}
+                      transition={{ duration: 0.5, delay: index * 0.1 }}
+                      className="relative"
+                    >
                       <div className="absolute left-0 md:left-1/2 w-8 h-8 bg-background border-2 border-primary rounded-full flex items-center justify-center transform md:translate-x-[-50%] translate-x-0">
                         <Building className="w-4 h-4 text-primary" />
                       </div>
-
-                      {/* Content */}
                       <div
                         className={`ml-12 md:ml-0 ${
                           index % 2 === 0
@@ -214,8 +261,12 @@ export default function AboutMe() {
                           </div>
                           <div className="mt-2 space-y-2 text-sm">
                             {job.responsibilities.map((resp, idx) => (
-                              <div
+                              <motion.div
                                 key={idx}
+                                initial={{ opacity: 0, y: 10 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: true, amount: 0.2 }}
+                                transition={{ duration: 0.3, delay: idx * 0.1 }}
                                 className={`flex items-start gap-2 ${
                                   index % 2 === 0
                                     ? "md:flex-row-reverse md:text-right"
@@ -226,19 +277,19 @@ export default function AboutMe() {
                                   <CheckCircle2 className="w-4 h-4 text-primary" />
                                 </div>
                                 <p>{resp}</p>
-                              </div>
+                              </motion.div>
                             ))}
                           </div>
                         </div>
                       </div>
-                    </div>
+                    </motion.div>
                   ))}
                 </div>
               </div>
-            </section>
+            </motion.section>
           </CardContent>
         </Card>
-      </div>
+      </motion.div>
     </div>
   );
 }
