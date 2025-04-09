@@ -17,7 +17,7 @@ export default function App() {
   const [activeTab, setActiveTab] = useState("home");
 
   const handleSwipe = (
-    event: MouseEvent | TouchEvent | PointerEvent,
+    _: MouseEvent | TouchEvent | PointerEvent,
     info: PanInfo
   ) => {
     const threshold = 50;
