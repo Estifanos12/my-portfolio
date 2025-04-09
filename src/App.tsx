@@ -60,7 +60,7 @@ export default function App() {
             className="text-lg text-muted-foreground max-w-2xl mx-auto"
           >
             Explore my journey through code 💻, creativity 🎨, and innovation
-            🧠. Each tab tells a different story of my professional path 📚.
+            🧠. Each code tells a different story of my professional path 📚.
             Let's build something amazing together! 🤝
           </motion.p>
         </motion.div>
