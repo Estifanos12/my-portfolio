@@ -91,7 +91,7 @@ export default function AboutMe() {
         transition={{ duration: 0.5 }}
         className="w-full"
       >
-        <Card className="lg:px-5 border-border/30">
+        <Card className="lg:px-5 border-border/40">
           <CardHeader>
             <motion.h2
               initial={{ opacity: 0, y: -20 }}
