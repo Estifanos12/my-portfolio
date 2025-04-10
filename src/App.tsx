@@ -66,7 +66,7 @@ export default function App() {
         </motion.div>
 
         <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
-          <TabsList className="grid w-full grid-cols-4">
+          <TabsList className="grid w-full grid-cols-4 border border-border/30">
             {tabs.map((tab) => (
               <TabsTrigger
                 key={tab.id}
