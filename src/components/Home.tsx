@@ -79,7 +79,7 @@ export default function Home() {
               <div className="absolute -top-6 -left-6 bg-border/50 size-20 rounded-3xl animate-float" />
               <div className="absolute -bottom-6 -right-6 bg-accent/50 size-20 rounded-3xl animate-float-delayed" />
               <img
-                src="/my-portfolio/img.jpg"
+                src="/img.jpg"
                 alt="Person Image"
                 className="relative z-10 h-96 lg:h-[26rem] object-cover rounded-3xl shadow-lg hover:scale-105 transition-transform duration-300"
               />
