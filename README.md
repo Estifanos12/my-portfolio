@@ -52,7 +52,7 @@ portfolio/
 ## 📧 Contact
 
 - **Email**: [estif17gtb@gmail.com](mailto:estif17gtb@gmail.com)
-- **Website**: [https://estifanosgashawtena.me](http://estifanos-gashawtena.me/my-portfolio/)
+- **Website**: [Estifanos Gasshawtena](https://estifanos17.vercel.app/)
 - **LinkedIn**: [Estifanos Gashawtena](https://www.linkedin.com/in/estifanos-gashawtena/)
 
 ---
