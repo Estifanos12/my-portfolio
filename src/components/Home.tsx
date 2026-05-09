@@ -154,7 +154,7 @@ export default function Home() {
               ))}
             </div>
             <a
-              href="/Estifanos-Gashawtena.pdf"
+              href="/Estifanos-Gashawtena-CV.pdf"
               download="EstifanosGashawtenaCV.pdf"
             >
               <Button size="lg" className="w-full self-center md:w-auto">
